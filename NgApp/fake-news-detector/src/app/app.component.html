@@ -1,0 +1,23 @@
+
+  <body>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div  class=" card col-lg-6">
+          <h1 class="text-center mb-4">Fake News Detector</h1>
+          <form (submit)="onSubmit()">
+            <div class="mb-3">
+              <textarea class="form-control" [(ngModel)]="news" placeholder="Enter news"></textarea>
+            </div>
+            <div class="d-grid gap-2">
+              <button class="btn btn-primary" type="submit">Check</button>
+            </div>
+          </form>
+          <p class="text-center mt-3" [ngStyle]="{ color: predictionColor }">{{ prediction }}</p>
+          <audio id="alarmSound" preload="auto" controls>
+            <source  src="/NgApp/fake-news-detector/src/assets/alarm.mp3" type="audio/mpeg">
+            Your browser does not support the audio element 
+          </audio>
+        </div>
+      </div>
+  </div> 
+</body>

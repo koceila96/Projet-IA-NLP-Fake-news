@@ -1,0 +1,10 @@
+<ng-container>
+<div>
+    <h1>Fake News Detector</h1>
+    <form (submit)="onSubmit()">
+      <textarea [(ngModel)]="news" placeholder="Enter news"></textarea>
+      <button type="submit">Check</button>
+    </form>
+    <p [ngStyle]="{ color: predictionColor }">{{ prediction }}</p>
+  </div>
+</ng-container>
